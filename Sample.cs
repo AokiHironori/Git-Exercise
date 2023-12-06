@@ -1,8 +1,8 @@
 public class SampleClass
 {
-    public int AddNumbers(int a, int b)
+    public int AddNumbers(int c, int d)
     {
-        return a + b;
+        return c + d-1;
     }
 
     public string ConcatenateStrings(string str1, string str2)
