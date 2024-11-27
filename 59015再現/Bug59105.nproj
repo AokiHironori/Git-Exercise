@@ -1,0 +1,1338 @@
+{
+  "Type": "Project",
+  "TopElementId": "2df23c72-b894-4ac4-bffd-890809c27aaa",
+  "SchemaVersion": "13.0",
+  "Project": {
+    "Id": "2df23c72-b894-4ac4-bffd-890809c27aaa",
+    "Name": "Bug59105",
+    "Summary": "",
+    "Group": null,
+    "Icon": "",
+    "OutputModelPath": false
+  },
+  "Profiles": [
+    {
+      "Id": "ea67795c-ab91-4043-a049-f079ba68390e",
+      "Name": "Bug59105",
+      "DisplayName": "Bug59105",
+      "Version": "1.0",
+      "ProtectKey": null,
+      "IsProtected": false,
+      "Metamodels": {
+        "Packages": [
+          {
+            "Id": "System",
+            "Name": "System",
+            "FullName": "System"
+          },
+          {
+            "Id": "System.Behavior",
+            "Name": "Behavior",
+            "FullName": "System.Behavior"
+          },
+          {
+            "Id": "DensoCreate",
+            "Name": "DensoCreate",
+            "FullName": "DensoCreate"
+          },
+          {
+            "Id": "DensoCreate.Indio",
+            "Name": "Indio",
+            "FullName": "DensoCreate.Indio"
+          },
+          {
+            "Id": "DensoCreate.Indio.IMF",
+            "Name": "IMF",
+            "FullName": "DensoCreate.Indio.IMF"
+          },
+          {
+            "Id": "DensoCreate.Indio.IMF.Model",
+            "Name": "Model",
+            "FullName": "DensoCreate.Indio.IMF.Model"
+          },
+          {
+            "Id": "DensoCreate.Indio.IMF.Model.RepresentationModel",
+            "Name": "RepresentationModel",
+            "FullName": "DensoCreate.Indio.IMF.Model.RepresentationModel"
+          },
+          {
+            "Id": "DensoCreate.Indio.IMF.Extensions",
+            "Name": "Extensions",
+            "FullName": "DensoCreate.Indio.IMF.Extensions"
+          },
+          {
+            "Id": "DensoCreate.Indio.IMF.Extensions.Diagram",
+            "Name": "Diagram",
+            "FullName": "DensoCreate.Indio.IMF.Extensions.Diagram"
+          },
+          {
+            "Id": "DensoCreate.Indio.IMF.Extensions.Sequence",
+            "Name": "Sequence",
+            "FullName": "DensoCreate.Indio.IMF.Extensions.Sequence"
+          },
+          {
+            "Id": "DensoCreate.Indio.IMF.Extensions.Form",
+            "Name": "Form",
+            "FullName": "DensoCreate.Indio.IMF.Extensions.Form"
+          },
+          {
+            "Id": "DensoCreate.Indio.IMF.Extensions.ProductLine",
+            "Name": "ProductLine",
+            "FullName": "DensoCreate.Indio.IMF.Extensions.ProductLine"
+          },
+          {
+            "Id": "DensoCreate.Indio.IMF.Extensions.Custom",
+            "Name": "Custom",
+            "FullName": "DensoCreate.Indio.IMF.Extensions.Custom"
+          },
+          {
+            "Id": "2246e578-33ad-4c94-a7d6-82f651fca9dd",
+            "Name": "Bug59105",
+            "FullName": "Bug59105",
+            "DisplayName": "Bug59105",
+            "Tags": [
+              {
+                "Name": "System.Root",
+                "Value": "true"
+              }
+            ],
+            "OwnedTypes": [
+              {
+                "Id": "4718a1d8-ce8e-4689-8121-c25f15581a8c",
+                "TypeKind": "Class",
+                "Name": "A",
+                "DisplayName": "A",
+                "Tags": [
+                  {
+                    "Name": "System.ShowInModelNavigator",
+                    "Value": "True"
+                  },
+                  {
+                    "Name": "System.ShowInTracePage",
+                    "Value": "True"
+                  },
+                  {
+                    "Name": "System.IsUnitizable",
+                    "Value": "True"
+                  },
+                  {
+                    "Name": "System.Type",
+                    "Value": "Entity"
+                  },
+                  {
+                    "Name": "System.ModelRoot",
+                    "Value": "True"
+                  }
+                ],
+                "Fields": [
+                  {
+                    "Id": "272292b3-955d-414e-88b9-35feab9689e3",
+                    "FieldType": "Property",
+                    "Name": "Name",
+                    "Override": true,
+                    "Unique": true,
+                    "LowerBound": 1,
+                    "UpperBound": 1,
+                    "ValueTypeName": "String",
+                    "ValueTypeKind": "Primitive",
+                    "DisplayName": "名前",
+                    "Tags": [
+                      {
+                        "Name": "System.Name",
+                        "Value": "true"
+                      }
+                    ]
+                  },
+                  {
+                    "Id": "1ead1f4b-8266-4426-bc5a-d0a8792b28c4",
+                    "FieldType": "Property",
+                    "Name": "Description",
+                    "Unique": true,
+                    "LowerBound": 1,
+                    "UpperBound": 1,
+                    "ValueTypeName": "String",
+                    "ValueTypeKind": "Primitive",
+                    "DisplayName": "説明",
+                    "Tags": [
+                      {
+                        "Name": "System.Description",
+                        "Value": "true"
+                      }
+                    ]
+                  },
+                  {
+                    "Id": "2b55e428-ea1e-4dc6-965d-f349fe09ba42",
+                    "FieldType": "Property",
+                    "Name": "B",
+                    "Unique": true,
+                    "LowerBound": 0,
+                    "UpperBound": -1,
+                    "RelationshipClassId": "9cf171a4-6333-4778-9036-ce804b972ae3",
+                    "ValueTypeName": "Bug59105.B",
+                    "ValueTypeKind": "Class",
+                    "ValueTypeId": "23c1ff90-c327-4761-b1ec-4755174917cb",
+                    "DisplayName": "B"
+                  },
+                  {
+                    "Id": "9b7e3add-d01e-4f4e-af80-56c41b31cab6",
+                    "FieldType": "Property",
+                    "Name": "C",
+                    "Unique": true,
+                    "LowerBound": 0,
+                    "UpperBound": -1,
+                    "RelationshipClassId": "2a7c8009-677c-4c18-8f3e-d78c5e1d7b9c",
+                    "ValueTypeName": "Bug59105.C",
+                    "ValueTypeKind": "Class",
+                    "ValueTypeId": "bcfb2190-abb8-47e8-a4e0-099ee47e3428",
+                    "DisplayName": "C"
+                  }
+                ]
+              },
+              {
+                "Id": "23c1ff90-c327-4761-b1ec-4755174917cb",
+                "TypeKind": "Class",
+                "Name": "B",
+                "DisplayName": "B",
+                "Tags": [
+                  {
+                    "Name": "System.ShowInModelNavigator",
+                    "Value": "True"
+                  },
+                  {
+                    "Name": "System.ShowInTracePage",
+                    "Value": "True"
+                  },
+                  {
+                    "Name": "System.IsUnitizable",
+                    "Value": "True"
+                  },
+                  {
+                    "Name": "System.Type",
+                    "Value": "Entity"
+                  }
+                ],
+                "Fields": [
+                  {
+                    "Id": "8f5966c2-06ea-472d-b143-5361163eaab7",
+                    "FieldType": "Property",
+                    "Name": "Name",
+                    "Override": true,
+                    "Unique": true,
+                    "LowerBound": 1,
+                    "UpperBound": 1,
+                    "ValueTypeName": "String",
+                    "ValueTypeKind": "Primitive",
+                    "DisplayName": "名前",
+                    "Tags": [
+                      {
+                        "Name": "System.Name",
+                        "Value": "true"
+                      }
+                    ]
+                  },
+                  {
+                    "Id": "5b0f497f-74a4-4aa0-b8c2-2bab19546dbc",
+                    "FieldType": "Property",
+                    "Name": "Description",
+                    "Unique": true,
+                    "LowerBound": 1,
+                    "UpperBound": 1,
+                    "ValueTypeName": "String",
+                    "ValueTypeKind": "Primitive",
+                    "DisplayName": "説明",
+                    "Tags": [
+                      {
+                        "Name": "System.Description",
+                        "Value": "true"
+                      }
+                    ]
+                  },
+                  {
+                    "Id": "cc3a046a-d6de-4035-8f36-2ceba79aa438",
+                    "FieldType": "Reference",
+                    "Name": "___anonymous___owner_related_to_A_B",
+                    "Unique": true,
+                    "LowerBound": 0,
+                    "UpperBound": -1,
+                    "RelationshipClassId": "9cf171a4-6333-4778-9036-ce804b972ae3",
+                    "ValueTypeName": "Bug59105.A",
+                    "ValueTypeKind": "Class",
+                    "ValueTypeId": "4718a1d8-ce8e-4689-8121-c25f15581a8c",
+                    "DisplayName": "親A"
+                  },
+                  {
+                    "Id": "1191aa8a-4cc1-45f3-b140-ab68d776e132",
+                    "FieldType": "Reference",
+                    "Name": "C",
+                    "Unique": true,
+                    "LowerBound": 0,
+                    "UpperBound": -1,
+                    "RelationshipClassId": "50545b5f-84eb-4e75-803a-b9c08aba7de6",
+                    "ValueTypeName": "Bug59105.C",
+                    "ValueTypeKind": "Class",
+                    "ValueTypeId": "bcfb2190-abb8-47e8-a4e0-099ee47e3428",
+                    "DisplayName": "C"
+                  }
+                ]
+              },
+              {
+                "Id": "bcfb2190-abb8-47e8-a4e0-099ee47e3428",
+                "TypeKind": "Class",
+                "Name": "C",
+                "DisplayName": "C",
+                "Tags": [
+                  {
+                    "Name": "System.ShowInModelNavigator",
+                    "Value": "True"
+                  },
+                  {
+                    "Name": "System.ShowInTracePage",
+                    "Value": "True"
+                  },
+                  {
+                    "Name": "System.IsUnitizable",
+                    "Value": "True"
+                  },
+                  {
+                    "Name": "System.Type",
+                    "Value": "Entity"
+                  }
+                ],
+                "Fields": [
+                  {
+                    "Id": "dfaf24e5-bc75-4c3a-9c84-01febe86fd69",
+                    "FieldType": "Property",
+                    "Name": "Name",
+                    "Override": true,
+                    "Unique": true,
+                    "LowerBound": 1,
+                    "UpperBound": 1,
+                    "ValueTypeName": "String",
+                    "ValueTypeKind": "Primitive",
+                    "DisplayName": "名前",
+                    "Tags": [
+                      {
+                        "Name": "System.Name",
+                        "Value": "true"
+                      }
+                    ]
+                  },
+                  {
+                    "Id": "4a7bd91c-d0f1-4e4e-b26f-23f59a0b3494",
+                    "FieldType": "Property",
+                    "Name": "Description",
+                    "Unique": true,
+                    "LowerBound": 1,
+                    "UpperBound": 1,
+                    "ValueTypeName": "String",
+                    "ValueTypeKind": "Primitive",
+                    "DisplayName": "説明",
+                    "Tags": [
+                      {
+                        "Name": "System.Description",
+                        "Value": "true"
+                      }
+                    ]
+                  },
+                  {
+                    "Id": "f0b59d15-196a-483b-9001-02e45cc3770d",
+                    "FieldType": "Reference",
+                    "Name": "___anonymous___owner_related_to_A_C",
+                    "Unique": true,
+                    "LowerBound": 0,
+                    "UpperBound": -1,
+                    "RelationshipClassId": "2a7c8009-677c-4c18-8f3e-d78c5e1d7b9c",
+                    "ValueTypeName": "Bug59105.A",
+                    "ValueTypeKind": "Class",
+                    "ValueTypeId": "4718a1d8-ce8e-4689-8121-c25f15581a8c",
+                    "DisplayName": "親A"
+                  },
+                  {
+                    "Id": "81ad8718-306b-4ef4-bc95-bfad3d2258a1",
+                    "FieldType": "Reference",
+                    "Name": "B",
+                    "Unique": true,
+                    "LowerBound": 0,
+                    "UpperBound": -1,
+                    "RelationshipClassId": "50545b5f-84eb-4e75-803a-b9c08aba7de6",
+                    "ValueTypeName": "Bug59105.B",
+                    "ValueTypeKind": "Class",
+                    "ValueTypeId": "23c1ff90-c327-4761-b1ec-4755174917cb",
+                    "DisplayName": "B"
+                  }
+                ]
+              },
+              {
+                "Id": "50545b5f-84eb-4e75-803a-b9c08aba7de6",
+                "TypeKind": "RefRelationship",
+                "Name": "Ref_B_C",
+                "IsOneway": true,
+                "DisplayName": "Cの参照",
+                "Fields": [
+                  {
+                    "Id": "b2aafcd9-d58d-440e-85dd-b313539ff87b",
+                    "FieldType": "Property",
+                    "Name": "Name",
+                    "Override": true,
+                    "Unique": true,
+                    "LowerBound": 1,
+                    "UpperBound": 1,
+                    "ValueTypeName": "String",
+                    "ValueTypeKind": "Primitive",
+                    "DisplayName": "名前",
+                    "Tags": [
+                      {
+                        "Name": "System.Name",
+                        "Value": "true"
+                      }
+                    ]
+                  },
+                  {
+                    "Id": "3b3e9cd4-0f2c-47a7-a7de-50bd8509e837",
+                    "FieldType": "Property",
+                    "Name": "Description",
+                    "Unique": true,
+                    "LowerBound": 1,
+                    "UpperBound": 1,
+                    "ValueTypeName": "String",
+                    "ValueTypeKind": "Primitive",
+                    "DisplayName": "説明",
+                    "Tags": [
+                      {
+                        "Name": "System.Description",
+                        "Value": "true"
+                      }
+                    ]
+                  }
+                ],
+                "Target": {
+                  "Id": "81ad8718-306b-4ef4-bc95-bfad3d2258a1",
+                  "RoleType": "RoleFrom",
+                  "Name": "B",
+                  "LowerBound": 0,
+                  "UpperBound": -1,
+                  "ValueTypeName": "Bug59105.B",
+                  "ValueTypeKind": "Class",
+                  "ValueTypeId": "23c1ff90-c327-4761-b1ec-4755174917cb"
+                },
+                "Source": {
+                  "Id": "1191aa8a-4cc1-45f3-b140-ab68d776e132",
+                  "RoleType": "RoleTo",
+                  "Name": "C",
+                  "LowerBound": 0,
+                  "UpperBound": -1,
+                  "ValueTypeName": "Bug59105.C",
+                  "ValueTypeKind": "Class",
+                  "ValueTypeId": "bcfb2190-abb8-47e8-a4e0-099ee47e3428"
+                }
+              }
+            ]
+          },
+          {
+            "Id": "b5f87b3d-0cd9-4187-8a62-f3a3fde360ee",
+            "Name": "___AnonymousTypePackage",
+            "FullName": "Bug59105.___AnonymousTypePackage",
+            "DisplayName": "匿名型",
+            "OwnedTypes": [
+              {
+                "Id": "9cf171a4-6333-4778-9036-ce804b972ae3",
+                "TypeKind": "EmbedRelationship",
+                "Name": "___anonymous___embedrelationship_A_B",
+                "IsOneway": true,
+                "DisplayName": "Bの所有",
+                "Target": {
+                  "Id": "cc3a046a-d6de-4035-8f36-2ceba79aa438",
+                  "RoleType": "RoleParent",
+                  "Name": "___anonymous___owner_related_to_A_B",
+                  "LowerBound": 0,
+                  "UpperBound": -1,
+                  "ValueTypeName": "Bug59105.A",
+                  "ValueTypeKind": "Class",
+                  "ValueTypeId": "4718a1d8-ce8e-4689-8121-c25f15581a8c"
+                },
+                "Source": {
+                  "Id": "2b55e428-ea1e-4dc6-965d-f349fe09ba42",
+                  "RoleType": "RoleChild",
+                  "Name": "B",
+                  "LowerBound": 0,
+                  "UpperBound": -1,
+                  "ValueTypeName": "Bug59105.B",
+                  "ValueTypeKind": "Class",
+                  "ValueTypeId": "23c1ff90-c327-4761-b1ec-4755174917cb"
+                }
+              },
+              {
+                "Id": "2a7c8009-677c-4c18-8f3e-d78c5e1d7b9c",
+                "TypeKind": "EmbedRelationship",
+                "Name": "___anonymous___embedrelationship_A_C",
+                "IsOneway": true,
+                "DisplayName": "Cの所有",
+                "Target": {
+                  "Id": "f0b59d15-196a-483b-9001-02e45cc3770d",
+                  "RoleType": "RoleParent",
+                  "Name": "___anonymous___owner_related_to_A_C",
+                  "LowerBound": 0,
+                  "UpperBound": -1,
+                  "ValueTypeName": "Bug59105.A",
+                  "ValueTypeKind": "Class",
+                  "ValueTypeId": "4718a1d8-ce8e-4689-8121-c25f15581a8c"
+                },
+                "Source": {
+                  "Id": "9b7e3add-d01e-4f4e-af80-56c41b31cab6",
+                  "RoleType": "RoleChild",
+                  "Name": "C",
+                  "LowerBound": 0,
+                  "UpperBound": -1,
+                  "ValueTypeName": "Bug59105.C",
+                  "ValueTypeKind": "Class",
+                  "ValueTypeId": "bcfb2190-abb8-47e8-a4e0-099ee47e3428"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      "ViewDefinitions": [
+        {
+          "ViewType": "Form",
+          "Id": "bc96f0a0-6898-4adb-b534-3f3073075ba3",
+          "DisplayName": "詳細",
+          "Name": "Detail",
+          "MetamodelId": "4718a1d8-ce8e-4689-8121-c25f15581a8c",
+          "ShowIcon": false,
+          "IsReadOnly": false,
+          "DisplayTarget": "Both",
+          "ShowTitle": false,
+          "OutlineNumberLevel": 0,
+          "AutoGenerated": false,
+          "FixColumnIndex": 0,
+          "RootControl": {
+            "ControlType": "EntityControl",
+            "Id": "c1c483f0-2f81-451a-b287-a26d0bd1b8af",
+            "Name": "エンティティ_1",
+            "MetamodelId": "4718a1d8-ce8e-4689-8121-c25f15581a8c",
+            "ShowIcon": false,
+            "IsReadOnly": false,
+            "IsReference": false,
+            "HasPathMultipleSteps": false,
+            "ShowTitle": true,
+            "ShowTitleIcon": false,
+            "ShowGridLine": false,
+            "TitleBindingPath": "Name",
+            "Controls": [
+              {
+                "ControlType": "Text",
+                "Id": "bd55bde4-1e0e-4d0d-b108-5e6bb8fc088c",
+                "DisplayName": "説明",
+                "Name": "Description",
+                "ShowIcon": false,
+                "IsReadOnly": false,
+                "Path": "Description",
+                "IsReference": false,
+                "HasPathMultipleSteps": false,
+                "ShowTitle": true,
+                "ShowTitleIcon": false,
+                "ShowGridLine": false
+              },
+              {
+                "ControlType": "Grid",
+                "Id": "6cb2aab3-6a4c-4ad3-90b6-8086a882b7c2",
+                "DisplayName": "B",
+                "Name": "B",
+                "ShowIcon": false,
+                "IsReadOnly": false,
+                "Path": "B",
+                "IsReference": false,
+                "HasPathMultipleSteps": false,
+                "ShowTitle": true,
+                "ShowTitleIcon": false,
+                "ShowGridLine": false,
+                "BulletType": "Number",
+                "RowHeight": "Auto",
+                "Columns": [
+                  {
+                    "ControlType": "GridColumn",
+                    "Id": "f6a800f0-2024-43ff-a392-f8947e10825d",
+                    "DisplayName": "名前",
+                    "Name": "Name",
+                    "MetamodelId": "23c1ff90-c327-4761-b1ec-4755174917cb",
+                    "ShowIcon": false,
+                    "IsReadOnly": false,
+                    "Path": "Name",
+                    "IsReference": false,
+                    "HasPathMultipleSteps": false,
+                    "ShowTitle": true,
+                    "ShowTitleIcon": false,
+                    "ShowGridLine": false,
+                    "Width": 100,
+                    "MinWidth": 40,
+                    "Order": 0,
+                    "ColumnControlId": "571d26ef-1f1f-4727-958b-ffbeb6ca97e4",
+                    "ColumnControlType": "Text"
+                  }
+                ]
+              },
+              {
+                "ControlType": "Grid",
+                "Id": "6e30d926-67dd-4f75-a694-f873799fcc52",
+                "DisplayName": "C",
+                "Name": "C",
+                "ShowIcon": false,
+                "IsReadOnly": false,
+                "Path": "C",
+                "IsReference": false,
+                "HasPathMultipleSteps": false,
+                "ShowTitle": true,
+                "ShowTitleIcon": false,
+                "ShowGridLine": false,
+                "BulletType": "Number",
+                "RowHeight": "Auto",
+                "Columns": [
+                  {
+                    "ControlType": "GridColumn",
+                    "Id": "762af39d-0cdd-400a-9a93-8cef3d138aa1",
+                    "DisplayName": "名前",
+                    "Name": "Name",
+                    "MetamodelId": "bcfb2190-abb8-47e8-a4e0-099ee47e3428",
+                    "ShowIcon": false,
+                    "IsReadOnly": false,
+                    "Path": "Name",
+                    "IsReference": false,
+                    "HasPathMultipleSteps": false,
+                    "ShowTitle": true,
+                    "ShowTitleIcon": false,
+                    "ShowGridLine": false,
+                    "Width": 100,
+                    "MinWidth": 40,
+                    "Order": 0,
+                    "ColumnControlId": "a225a290-5f94-4fbc-8873-619d1bd065b3",
+                    "ColumnControlType": "Text"
+                  }
+                ]
+              }
+            ]
+          },
+          "Layout": {
+            "ViewElementType": "DocumentLayout",
+            "TitleWidth": 250
+          }
+        },
+        {
+          "ViewType": "Form",
+          "Id": "316d5ba5-1554-4186-b26e-1680789f15cb",
+          "DisplayName": "詳細",
+          "Name": "Detail",
+          "MetamodelId": "23c1ff90-c327-4761-b1ec-4755174917cb",
+          "ShowIcon": false,
+          "IsReadOnly": false,
+          "DisplayTarget": "Both",
+          "ShowTitle": false,
+          "OutlineNumberLevel": 0,
+          "AutoGenerated": false,
+          "FixColumnIndex": 0,
+          "RootControl": {
+            "ControlType": "EntityControl",
+            "Id": "7eb2731b-3828-4357-a377-33a46dbfe128",
+            "Name": "エンティティ_2",
+            "MetamodelId": "23c1ff90-c327-4761-b1ec-4755174917cb",
+            "ShowIcon": false,
+            "IsReadOnly": false,
+            "IsReference": false,
+            "HasPathMultipleSteps": false,
+            "ShowTitle": true,
+            "ShowTitleIcon": false,
+            "ShowGridLine": false,
+            "TitleBindingPath": "Name",
+            "Controls": [
+              {
+                "ControlType": "Text",
+                "Id": "c732e9d1-304e-4f86-8ee2-4167ccf8ca70",
+                "DisplayName": "説明",
+                "Name": "Description",
+                "ShowIcon": false,
+                "IsReadOnly": false,
+                "Path": "Description",
+                "IsReference": false,
+                "HasPathMultipleSteps": false,
+                "ShowTitle": true,
+                "ShowTitleIcon": false,
+                "ShowGridLine": false
+              },
+              {
+                "ControlType": "Grid",
+                "Id": "01b77a92-acd9-4b9e-8445-d5fefef644db",
+                "DisplayName": "C",
+                "Name": "C",
+                "ShowIcon": false,
+                "IsReadOnly": false,
+                "Path": "C",
+                "IsReference": false,
+                "HasPathMultipleSteps": false,
+                "ShowTitle": true,
+                "ShowTitleIcon": false,
+                "ShowGridLine": false,
+                "BulletType": "Number",
+                "RowHeight": "Auto",
+                "Columns": [
+                  {
+                    "ControlType": "GridColumn",
+                    "Id": "f239e2f1-6f42-4b95-bb9e-06ba244436e5",
+                    "DisplayName": "名前",
+                    "Name": "Name",
+                    "MetamodelId": "bcfb2190-abb8-47e8-a4e0-099ee47e3428",
+                    "ShowIcon": false,
+                    "IsReadOnly": false,
+                    "Path": "Name",
+                    "IsReference": false,
+                    "HasPathMultipleSteps": false,
+                    "ShowTitle": true,
+                    "ShowTitleIcon": false,
+                    "ShowGridLine": false,
+                    "Width": 100,
+                    "MinWidth": 40,
+                    "Order": 0,
+                    "ColumnControlId": "91cd6760-f50b-433a-a01f-f13016c97098",
+                    "ColumnControlType": "Text"
+                  }
+                ]
+              }
+            ]
+          },
+          "Layout": {
+            "ViewElementType": "DocumentLayout",
+            "TitleWidth": 250
+          }
+        },
+        {
+          "ViewType": "Form",
+          "Id": "f1c8fa63-5957-4a4e-8334-9de004ca728d",
+          "DisplayName": "詳細",
+          "Name": "Detail",
+          "MetamodelId": "bcfb2190-abb8-47e8-a4e0-099ee47e3428",
+          "ShowIcon": false,
+          "IsReadOnly": false,
+          "DisplayTarget": "Both",
+          "ShowTitle": false,
+          "OutlineNumberLevel": 0,
+          "AutoGenerated": false,
+          "FixColumnIndex": 0,
+          "RootControl": {
+            "ControlType": "EntityControl",
+            "Id": "3c58ca9a-8b8c-408f-baf6-cce4d7557704",
+            "Name": "エンティティ_3",
+            "MetamodelId": "bcfb2190-abb8-47e8-a4e0-099ee47e3428",
+            "ShowIcon": false,
+            "IsReadOnly": false,
+            "IsReference": false,
+            "HasPathMultipleSteps": false,
+            "ShowTitle": true,
+            "ShowTitleIcon": false,
+            "ShowGridLine": false,
+            "TitleBindingPath": "Name",
+            "Controls": [
+              {
+                "ControlType": "Text",
+                "Id": "59514ca8-1997-4e7e-b314-a2d46ed6463a",
+                "DisplayName": "説明",
+                "Name": "Description",
+                "ShowIcon": false,
+                "IsReadOnly": false,
+                "Path": "Description",
+                "IsReference": false,
+                "HasPathMultipleSteps": false,
+                "ShowTitle": true,
+                "ShowTitleIcon": false,
+                "ShowGridLine": false
+              }
+            ]
+          },
+          "Layout": {
+            "ViewElementType": "DocumentLayout",
+            "TitleWidth": 250
+          }
+        },
+        {
+          "ViewType": "ERDiagram",
+          "Id": "dc91d5c8-9176-42d0-99b4-9a6cd6571c7c",
+          "DisplayName": "ER",
+          "Name": "ER",
+          "MetamodelId": "4718a1d8-ce8e-4689-8121-c25f15581a8c",
+          "ShowIcon": false,
+          "IsReadOnly": false,
+          "DisplayTarget": "Both",
+          "BackgroundImage": "",
+          "Nodes": [
+            {
+              "ViewElementType": "SimpleShape",
+              "Id": "4d81971e-fbb4-4a4e-8533-385d7faf8fc0",
+              "DisplayName": "B",
+              "Name": "B",
+              "MetamodelId": "23c1ff90-c327-4761-b1ec-4755174917cb",
+              "ShowIcon": false,
+              "IsReadOnly": false,
+              "Path": "B",
+              "IsReference": false,
+              "HasPathMultipleSteps": false,
+              "MappingTarget": "Path",
+              "AutoAdd": true,
+              "ShowMetamodelIcon": false,
+              "IsLayoutLocked": false,
+              "DefaultWidth": 120,
+              "DefaultHeight": 80,
+              "MinWidth": 40,
+              "MinHeight": 40,
+              "MaxWidth": 1.7976931348623157E+308,
+              "MaxHeight": 1.7976931348623157E+308,
+              "IconAlignment": "TopRight",
+              "NodeShapeType": "TitleOnly",
+              "Invalid": false,
+              "ShowPorts": true,
+              "CompositeDepth": -1,
+              "IsShowingComposites": false,
+              "Padding": 5,
+              "TitleText": {
+                "Id": "8ab6522c-8a36-48e6-b942-28fc9144ee88",
+                "ShowIcon": false,
+                "IsReadOnly": false,
+                "Path": "Name",
+                "IsReference": false,
+                "HasPathMultipleSteps": false,
+                "IconAlignment": "Left",
+                "Style": {
+                  "Id": "c34c3ea1-5e73-4d8b-8650-cb710283f7b7",
+                  "ForeColor": "Black",
+                  "FontSize": 11,
+                  "FontFamily": "Meiryo",
+                  "IsUnderline": false,
+                  "IsItalic": false,
+                  "IsBold": false,
+                  "DecorateStrikeThrough": false,
+                  "WordWrap": false,
+                  "IsReadOnly": false,
+                  "VerticalTextAlignment": "Middle",
+                  "HorizontalTextAlignment": "Center"
+                }
+              },
+              "CategoryText": {
+                "Id": "707be389-7141-4d4f-9958-d2aa20dca03a",
+                "ShowIcon": false,
+                "IsReadOnly": false,
+                "Path": "Name",
+                "IsReference": false,
+                "HasPathMultipleSteps": false,
+                "IconAlignment": "Left",
+                "DisplayPolicy": "Never",
+                "Style": {
+                  "Id": "a93746e2-75a3-4e40-9298-965dab9057b5",
+                  "ForeColor": "Black",
+                  "FontSize": 11,
+                  "FontFamily": "Meiryo",
+                  "IsUnderline": false,
+                  "IsItalic": false,
+                  "IsBold": false,
+                  "DecorateStrikeThrough": false,
+                  "WordWrap": false,
+                  "IsReadOnly": false,
+                  "VerticalTextAlignment": "Middle",
+                  "HorizontalTextAlignment": "Center"
+                }
+              },
+              "Style": {
+                "Id": "36fa5cd9-a337-42b9-b868-e20dcedb5e7b",
+                "ForeColor": "GradientBlueTop",
+                "BackColor": "GradientBlueTop",
+                "BorderColor": "GradientBlueTop",
+                "BorderThickness": 1,
+                "BorderStyle": "Solid",
+                "Figure": "rectangle",
+                "CanChangeFigure": false,
+                "CanPasteImage": false
+              }
+            },
+            {
+              "ViewElementType": "CompartmentShape",
+              "Id": "738dead2-778b-417e-a3cb-c4c856c23e24",
+              "DisplayName": "C",
+              "Name": "C",
+              "MetamodelId": "bcfb2190-abb8-47e8-a4e0-099ee47e3428",
+              "ShowIcon": false,
+              "IsReadOnly": false,
+              "Path": "C",
+              "IsReference": false,
+              "HasPathMultipleSteps": false,
+              "MappingTarget": "Path",
+              "AutoAdd": true,
+              "ShowMetamodelIcon": true,
+              "IsLayoutLocked": false,
+              "DefaultWidth": 100,
+              "DefaultHeight": 100,
+              "MinWidth": 40,
+              "MinHeight": 40,
+              "MaxWidth": 1.7976931348623157E+308,
+              "MaxHeight": 1.7976931348623157E+308,
+              "IconAlignment": "TopRight",
+              "NodeShapeType": "Compartment",
+              "Invalid": false,
+              "ShowPorts": true,
+              "TitleText": {
+                "Id": "80eb3e6e-fa85-4477-a51e-494253c238b0",
+                "ShowIcon": false,
+                "IsReadOnly": false,
+                "Path": "Name",
+                "IsReference": false,
+                "HasPathMultipleSteps": false,
+                "IconAlignment": "Left",
+                "Style": {
+                  "Id": "779d0874-d6f3-4b51-8932-d8c98260e76e",
+                  "ForeColor": "Black",
+                  "FontSize": 11,
+                  "FontFamily": "Meiryo",
+                  "IsUnderline": false,
+                  "IsItalic": false,
+                  "IsBold": false,
+                  "DecorateStrikeThrough": false,
+                  "WordWrap": false,
+                  "IsReadOnly": false,
+                  "VerticalTextAlignment": "Middle",
+                  "HorizontalTextAlignment": "Center"
+                }
+              },
+              "CategoryText": {
+                "Id": "4b38390a-7139-462a-9f8e-3bc715899a6a",
+                "ShowIcon": false,
+                "IsReadOnly": false,
+                "Path": "Name",
+                "IsReference": false,
+                "HasPathMultipleSteps": false,
+                "IconAlignment": "Left",
+                "DisplayPolicy": "Never",
+                "Style": {
+                  "Id": "dcdc0a1f-743c-4884-ae52-40bb084db2c6",
+                  "ForeColor": "Black",
+                  "FontSize": 11,
+                  "FontFamily": "Meiryo",
+                  "IsUnderline": false,
+                  "IsItalic": false,
+                  "IsBold": false,
+                  "DecorateStrikeThrough": false,
+                  "WordWrap": false,
+                  "IsReadOnly": false,
+                  "VerticalTextAlignment": "Middle",
+                  "HorizontalTextAlignment": "Center"
+                }
+              },
+              "Style": {
+                "Id": "7c3fea6d-fcdc-4b04-95a7-5d825d4a0fbd",
+                "ForeColor": "GradientBlueTop",
+                "BackColor": "GradientBlueTop",
+                "BorderColor": "GradientBlueTop",
+                "BorderThickness": 1,
+                "BorderStyle": "Solid",
+                "Figure": "rectangle",
+                "CanChangeFigure": false,
+                "CanPasteImage": false
+              }
+            }
+          ],
+          "Connectors": [
+            {
+              "ViewElementType": "ConnectorShape",
+              "Id": "2a069045-ba57-41a3-9f84-689d9a71a95d",
+              "DisplayName": "Cの参照",
+              "Name": "Cの参照",
+              "MetamodelId": "50545b5f-84eb-4e75-803a-b9c08aba7de6",
+              "ShowIcon": false,
+              "IsReadOnly": false,
+              "Path": "",
+              "IsReference": false,
+              "HasPathMultipleSteps": false,
+              "MappingTarget": "Path",
+              "AutoAdd": true,
+              "ShowMetamodelIcon": false,
+              "CanEditBends": true,
+              "Orientation": "Both",
+              "Labels": [
+                {
+                  "Id": "9d00af09-1ecf-42f4-ad01-65509171ddd2",
+                  "DisplayName": "Cの参照",
+                  "Name": "Ref_B_C",
+                  "ShowIcon": false,
+                  "IsReadOnly": false,
+                  "Path": "this",
+                  "IsReference": false,
+                  "HasPathMultipleSteps": false,
+                  "EditingOrder": 0,
+                  "Text": {
+                    "Id": "a0880b55-de15-4bd1-9972-61811f12fbaf",
+                    "ShowIcon": false,
+                    "IsReadOnly": false,
+                    "Path": "Name",
+                    "IsReference": false,
+                    "HasPathMultipleSteps": false,
+                    "IconAlignment": "Left"
+                  },
+                  "LabelStyle": {
+                    "Id": "65bfa5ac-f165-47d5-9820-5a35e743315f",
+                    "ForeColor": "Black",
+                    "FontSize": 11,
+                    "FontFamily": "Meiryo",
+                    "IsUnderline": false,
+                    "IsItalic": false,
+                    "IsBold": false,
+                    "DecorateStrikeThrough": false,
+                    "WordWrap": false,
+                    "IsReadOnly": false,
+                    "VerticalTextAlignment": "Middle",
+                    "HorizontalTextAlignment": "Center"
+                  },
+                  "LabelLayout": {
+                    "AnchorRatio": 0.5,
+                    "Distance": -10,
+                    "Angle": 0
+                  }
+                }
+              ],
+              "Style": {
+                "Id": "23607f55-f1ee-4034-93a7-9cbc50f2de79",
+                "ForeColor": "#000000",
+                "BackColor": "Black",
+                "BorderColor": "Black",
+                "BorderThickness": 1,
+                "BorderStyle": "Solid",
+                "StartPointFigure": "none",
+                "EndPointFigure": "Arrow",
+                "LineType": "Straight"
+              }
+            }
+          ],
+          "Layout": {
+            "ViewElementType": "FreeLayout",
+            "SnapsToGrid": false,
+            "GridCellSize": 0,
+            "ShowGridCellLine": false
+          }
+        }
+      ]
+    }
+  ],
+  "ProfileEditors": [
+    {
+      "Id": "2ad977e4-2d53-4398-8441-de9d1e089c03",
+      "Name": "新しいクラス図",
+      "DisplayName": "クラス図",
+      "OwnerPackageId": "2246e578-33ad-4c94-a7d6-82f651fca9dd",
+      "Order": 0,
+      "Nodes": [
+        {
+          "Id": "38482d60-508f-464d-b2a5-66c5d72c205a",
+          "LocationX": 195,
+          "LocationY": 22,
+          "ZOrder": 0,
+          "Width": 128,
+          "Height": 117,
+          "NodeType": "Entity",
+          "MetamodelId": "4718a1d8-ce8e-4689-8121-c25f15581a8c",
+          "ForeColor": "#FFFFFF",
+          "BackColor": "#498ABC",
+          "BorderColor": "#000000"
+        },
+        {
+          "Id": "e5415105-8e5a-4e5d-a4bd-f676aa3a7bfb",
+          "LocationX": 80,
+          "LocationY": 210,
+          "ZOrder": 1,
+          "Width": 128,
+          "Height": 117,
+          "NodeType": "Entity",
+          "MetamodelId": "23c1ff90-c327-4761-b1ec-4755174917cb",
+          "ForeColor": "#FFFFFF",
+          "BackColor": "#498ABC",
+          "BorderColor": "#000000"
+        },
+        {
+          "Id": "748d6c35-43ee-40f7-8f45-62c0a35599cf",
+          "LocationX": 326,
+          "LocationY": 210,
+          "ZOrder": 3,
+          "Width": 128,
+          "Height": 117,
+          "NodeType": "Entity",
+          "MetamodelId": "bcfb2190-abb8-47e8-a4e0-099ee47e3428",
+          "ForeColor": "#FFFFFF",
+          "BackColor": "#498ABC",
+          "BorderColor": "#000000"
+        }
+      ],
+      "Connectors": [
+        {
+          "Id": "2aa346d6-a91d-4cd4-9f5d-359997609d79",
+          "SourceId": "38482d60-508f-464d-b2a5-66c5d72c205a",
+          "TargetId": "e5415105-8e5a-4e5d-a4bd-f676aa3a7bfb",
+          "LineType": "Straight",
+          "ConnectorType": "Embed",
+          "MetamodelId": "9cf171a4-6333-4778-9036-ce804b972ae3",
+          "BackColor": "#000000",
+          "BorderColor": "#000000"
+        },
+        {
+          "Id": "cd9e8651-8c7d-4c2d-a5d2-3038b64674cc",
+          "SourceId": "38482d60-508f-464d-b2a5-66c5d72c205a",
+          "TargetId": "748d6c35-43ee-40f7-8f45-62c0a35599cf",
+          "LineType": "Straight",
+          "ConnectorType": "Embed",
+          "MetamodelId": "2a7c8009-677c-4c18-8f3e-d78c5e1d7b9c",
+          "BackColor": "#000000",
+          "BorderColor": "#000000"
+        },
+        {
+          "Id": "1dec4e99-396a-4cc7-af4a-646daf09925e",
+          "SourceId": "e5415105-8e5a-4e5d-a4bd-f676aa3a7bfb",
+          "TargetId": "748d6c35-43ee-40f7-8f45-62c0a35599cf",
+          "LineType": "Straight",
+          "ConnectorType": "Reference",
+          "MetamodelId": "50545b5f-84eb-4e75-803a-b9c08aba7de6",
+          "BorderColor": "#000000"
+        }
+      ]
+    }
+  ],
+  "Entities": [
+    {
+      "Id": "2df23c72-b894-4ac4-bffd-890809c27aaa",
+      "EntityType": null,
+      "Name": "Bug59105",
+      "MetamodelId": "System.Project.ProjectClass",
+      "Metamodel": "ProjectClass",
+      "Fields": {
+        "Name": "Bug59105",
+        "Description": ""
+      }
+    },
+    {
+      "Id": "3debe12f-c0da-4fec-9d4e-1ea5b0eba562",
+      "EntityType": "Entity",
+      "Name": "A",
+      "MetamodelId": "4718a1d8-ce8e-4689-8121-c25f15581a8c",
+      "Metamodel": "A",
+      "Fields": {
+        "Name": "A",
+        "Description": "A1(Own)"
+      }
+    },
+    {
+      "Id": "4e27cffa-e3c0-401f-8cf0-55e8b10cbd51",
+      "EntityType": "Entity",
+      "Name": "B",
+      "MetamodelId": "23c1ff90-c327-4761-b1ec-4755174917cb",
+      "Metamodel": "B",
+      "Fields": {
+        "Name": "B"
+      }
+    },
+    {
+      "Id": "b5f84a82-4e68-4c94-8993-23f04f91294b",
+      "EntityType": null,
+      "Name": "Bug59105",
+      "MetamodelId": "System.Design.___DesignModel",
+      "Metamodel": "DesignModel",
+      "Fields": {
+        "Name": "Bug59105"
+      }
+    },
+    {
+      "Id": "f4430595-a394-4e7a-bcb7-6e5433252cf0",
+      "EntityType": "Entity",
+      "Name": "C",
+      "MetamodelId": "bcfb2190-abb8-47e8-a4e0-099ee47e3428",
+      "Metamodel": "C",
+      "Fields": {
+        "Name": "C"
+      }
+    }
+  ],
+  "Relations": [
+    {
+      "Id": "3f82f496-5d7c-4b1d-ae5b-731728ab71a4",
+      "RelationType": "Embed",
+      "MetamodelId": "2a7c8009-677c-4c18-8f3e-d78c5e1d7b9c",
+      "Metamodel": "Cの所有",
+      "SourceId": "3debe12f-c0da-4fec-9d4e-1ea5b0eba562",
+      "TargetId": "f4430595-a394-4e7a-bcb7-6e5433252cf0",
+      "TargetIndex": -1
+    },
+    {
+      "Id": "57d1cc14-853f-4877-8364-8f8983949768",
+      "RelationType": "Embed",
+      "MetamodelId": "System.Design.___RootToEntities",
+      "Metamodel": "___RootToEntities",
+      "SourceId": "b5f84a82-4e68-4c94-8993-23f04f91294b",
+      "TargetId": "3debe12f-c0da-4fec-9d4e-1ea5b0eba562",
+      "TargetIndex": -1
+    },
+    {
+      "Id": "67233956-ab3e-4941-a805-04f07c407d80",
+      "RelationType": "Embed",
+      "MetamodelId": "System.Core.___ModelRoot_RootModels",
+      "Metamodel": "___ModelRoot_RootModels",
+      "SourceId": "2df23c72-b894-4ac4-bffd-890809c27aaa",
+      "TargetId": "b5f84a82-4e68-4c94-8993-23f04f91294b",
+      "TargetIndex": -1
+    },
+    {
+      "Id": "9c79239f-4b8d-4dbb-a7e6-4df4622b87cf",
+      "RelationType": "Ref",
+      "MetamodelId": "50545b5f-84eb-4e75-803a-b9c08aba7de6",
+      "Metamodel": "Cの参照",
+      "SourceId": "4e27cffa-e3c0-401f-8cf0-55e8b10cbd51",
+      "TargetId": "f4430595-a394-4e7a-bcb7-6e5433252cf0",
+      "TargetIndex": -1,
+      "Fields": {
+        "Name": "Ref1"
+      }
+    },
+    {
+      "Id": "cd232770-6d4a-433e-b523-8a8f41bfc3d4",
+      "RelationType": "Embed",
+      "MetamodelId": "9cf171a4-6333-4778-9036-ce804b972ae3",
+      "Metamodel": "Bの所有",
+      "SourceId": "3debe12f-c0da-4fec-9d4e-1ea5b0eba562",
+      "TargetId": "4e27cffa-e3c0-401f-8cf0-55e8b10cbd51",
+      "TargetIndex": -1
+    }
+  ],
+  "Editors": [
+    {
+      "Id": "d80e3ba2-5851-407c-a167-30068c2e2593",
+      "ViewType": "ERDiagram",
+      "MetamodelId": "DensoCreate.Indio.IMF.Extensions.Diagram.ViewInstance.ERDiagramViewInstance",
+      "DefinitionId": "dc91d5c8-9176-42d0-99b4-9a6cd6571c7c",
+      "ModelId": "3debe12f-c0da-4fec-9d4e-1ea5b0eba562",
+      "LayoutLevel": 0,
+      "Nodes": [
+        {
+          "Id": "6b07cf6c-6bf2-4725-aba7-80b0b953485c",
+          "ViewElementType": "SimpleShape",
+          "DefinitionId": "4d81971e-fbb4-4a4e-8533-385d7faf8fc0",
+          "ModelId": "4e27cffa-e3c0-401f-8cf0-55e8b10cbd51",
+          "RelationshipId": "cd232770-6d4a-433e-b523-8a8f41bfc3d4",
+          "LayoutLevel": 1,
+          "Visible": true,
+          "IsLocked": false,
+          "ZOrder": 0,
+          "IsVisible": true,
+          "LocationX": 123,
+          "LocationY": 104,
+          "MinimizeWidth": 0,
+          "MinimizeHeight": 0,
+          "IsRecurrence": false,
+          "ShowPorts": true,
+          "IsShowingComposites": true,
+          "Style": {
+            "ViewElementType": "NodeShapeStyle",
+            "DefinitionId": "36fa5cd9-a337-42b9-b868-e20dcedb5e7b",
+            "UseTheme": false
+          },
+          "Title": {
+            "DefinitionId": "8ab6522c-8a36-48e6-b942-28fc9144ee88",
+            "Visible": true,
+            "IsExpanded": true,
+            "Style": {
+              "DefinitionId": "c34c3ea1-5e73-4d8b-8650-cb710283f7b7"
+            }
+          },
+          "Category": {
+            "DefinitionId": "707be389-7141-4d4f-9958-d2aa20dca03a",
+            "Visible": true,
+            "IsExpanded": true,
+            "Style": {
+              "DefinitionId": "a93746e2-75a3-4e40-9298-965dab9057b5"
+            }
+          }
+        },
+        {
+          "Id": "1d32fa82-5467-44cc-869a-86e46ae17fed",
+          "ViewElementType": "CompartmentShape",
+          "DefinitionId": "738dead2-778b-417e-a3cb-c4c856c23e24",
+          "ModelId": "f4430595-a394-4e7a-bcb7-6e5433252cf0",
+          "RelationshipId": "3f82f496-5d7c-4b1d-ae5b-731728ab71a4",
+          "LayoutLevel": 1,
+          "Visible": true,
+          "IsLocked": false,
+          "ZOrder": 2,
+          "IsVisible": true,
+          "LocationX": 430,
+          "LocationY": 76,
+          "Width": 126,
+          "Height": 137,
+          "MinimizeWidth": 0,
+          "MinimizeHeight": 0,
+          "IsRecurrence": false,
+          "ShowPorts": true,
+          "Style": {
+            "ViewElementType": "NodeShapeStyle",
+            "DefinitionId": "7c3fea6d-fcdc-4b04-95a7-5d825d4a0fbd",
+            "UseTheme": false
+          },
+          "Title": {
+            "DefinitionId": "80eb3e6e-fa85-4477-a51e-494253c238b0",
+            "Visible": true,
+            "IsExpanded": true,
+            "Style": {
+              "DefinitionId": "779d0874-d6f3-4b51-8932-d8c98260e76e"
+            }
+          },
+          "Category": {
+            "DefinitionId": "4b38390a-7139-462a-9f8e-3bc715899a6a",
+            "Visible": true,
+            "IsExpanded": true,
+            "Style": {
+              "DefinitionId": "dcdc0a1f-743c-4884-ae52-40bb084db2c6"
+            }
+          }
+        }
+      ],
+      "Connectors": [
+        {
+          "Id": "79d98244-3bf4-4150-aeae-8ae9e48d9053",
+          "ViewElementType": "ConnectorShape",
+          "DefinitionId": "2a069045-ba57-41a3-9f84-689d9a71a95d",
+          "ModelId": "9c79239f-4b8d-4dbb-a7e6-4df4622b87cf",
+          "LayoutLevel": 0,
+          "Visible": true,
+          "IsLocked": false,
+          "ZOrder": 0,
+          "IsVisible": true,
+          "SourceId": "6b07cf6c-6bf2-4725-aba7-80b0b953485c",
+          "TargetId": "1d32fa82-5467-44cc-869a-86e46ae17fed",
+          "IsInnerRouted": false,
+          "Style": {
+            "ViewElementType": "ConnectorShapeStyle",
+            "DefinitionId": "23607f55-f1ee-4034-93a7-9cbc50f2de79",
+            "UseTheme": false
+          },
+          "Labels": [
+            {
+              "DefinitionId": "9d00af09-1ecf-42f4-ad01-65509171ddd2",
+              "Visible": true,
+              "IsExpanded": true,
+              "TextStyle": {
+                "DefinitionId": "65bfa5ac-f165-47d5-9820-5a35e743315f"
+              },
+              "Textual": {
+                "DefinitionId": "a0880b55-de15-4bd1-9972-61811f12fbaf",
+                "Visible": true,
+                "IsExpanded": true
+              },
+              "Layout": {
+                "ViewElementType": "ConnectorLabelLayout"
+              }
+            }
+          ]
+        }
+      ],
+      "Layout": {
+        "ViewElementType": "FreeLayout"
+      }
+    }
+  ]
+}
