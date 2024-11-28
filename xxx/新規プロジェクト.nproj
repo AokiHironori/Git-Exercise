@@ -1,0 +1,250 @@
+{
+  "Type": "Project",
+  "TopElementId": "478ee15e-2451-4e90-aa6a-55749b9b76c4",
+  "SchemaVersion": "13.0",
+  "Project": {
+    "Id": "478ee15e-2451-4e90-aa6a-55749b9b76c4",
+    "Name": "新規プロジェクト",
+    "Summary": "",
+    "Group": null,
+    "Icon": "",
+    "OutputModelPath": false
+  },
+  "Profiles": [
+    {
+      "Id": "30927e7d-0e5f-4e11-a5ae-30c97a3c96bf",
+      "Name": "新規プロジェクト",
+      "Version": "1.0",
+      "ProtectKey": null,
+      "IsProtected": false,
+      "Metamodels": {
+        "Packages": [
+          {
+            "Id": "System",
+            "Name": "System",
+            "FullName": "System"
+          },
+          {
+            "Id": "System.Behavior",
+            "Name": "Behavior",
+            "FullName": "System.Behavior"
+          },
+          {
+            "Id": "DensoCreate",
+            "Name": "DensoCreate",
+            "FullName": "DensoCreate"
+          },
+          {
+            "Id": "DensoCreate.Indio",
+            "Name": "Indio",
+            "FullName": "DensoCreate.Indio"
+          },
+          {
+            "Id": "DensoCreate.Indio.IMF",
+            "Name": "IMF",
+            "FullName": "DensoCreate.Indio.IMF"
+          },
+          {
+            "Id": "DensoCreate.Indio.IMF.Model",
+            "Name": "Model",
+            "FullName": "DensoCreate.Indio.IMF.Model"
+          },
+          {
+            "Id": "DensoCreate.Indio.IMF.Model.RepresentationModel",
+            "Name": "RepresentationModel",
+            "FullName": "DensoCreate.Indio.IMF.Model.RepresentationModel"
+          },
+          {
+            "Id": "DensoCreate.Indio.IMF.Extensions",
+            "Name": "Extensions",
+            "FullName": "DensoCreate.Indio.IMF.Extensions"
+          },
+          {
+            "Id": "DensoCreate.Indio.IMF.Extensions.Diagram",
+            "Name": "Diagram",
+            "FullName": "DensoCreate.Indio.IMF.Extensions.Diagram"
+          },
+          {
+            "Id": "DensoCreate.Indio.IMF.Extensions.Sequence",
+            "Name": "Sequence",
+            "FullName": "DensoCreate.Indio.IMF.Extensions.Sequence"
+          },
+          {
+            "Id": "DensoCreate.Indio.IMF.Extensions.Form",
+            "Name": "Form",
+            "FullName": "DensoCreate.Indio.IMF.Extensions.Form"
+          },
+          {
+            "Id": "DensoCreate.Indio.IMF.Extensions.ProductLine",
+            "Name": "ProductLine",
+            "FullName": "DensoCreate.Indio.IMF.Extensions.ProductLine"
+          },
+          {
+            "Id": "DensoCreate.Indio.IMF.Extensions.Custom",
+            "Name": "Custom",
+            "FullName": "DensoCreate.Indio.IMF.Extensions.Custom"
+          },
+          {
+            "Id": "5d0a4024-ac4a-4041-bb15-816f51e7e67f",
+            "Name": "新規プロジェクト",
+            "FullName": "新規プロジェクト",
+            "DisplayName": "新規プロジェクト",
+            "Tags": [
+              {
+                "Name": "System.Root",
+                "Value": "true"
+              }
+            ],
+            "OwnedTypes": [
+              {
+                "Id": "23a1073e-6e4e-4d94-a69f-6a80412fd410",
+                "TypeKind": "Class",
+                "Name": "xxx",
+                "DisplayName": "xxx",
+                "Tags": [
+                  {
+                    "Name": "System.ShowInModelNavigator",
+                    "Value": "True"
+                  },
+                  {
+                    "Name": "System.ShowInTracePage",
+                    "Value": "True"
+                  },
+                  {
+                    "Name": "System.IsUnitizable",
+                    "Value": "True"
+                  },
+                  {
+                    "Name": "System.Type",
+                    "Value": "Entity"
+                  }
+                ],
+                "Fields": [
+                  {
+                    "Id": "f413b11b-4414-4e2d-be17-ff71a70b67b9",
+                    "FieldType": "Property",
+                    "Name": "Name",
+                    "Override": true,
+                    "Unique": true,
+                    "LowerBound": 1,
+                    "UpperBound": 1,
+                    "ValueTypeName": "String",
+                    "ValueTypeKind": "Primitive",
+                    "DisplayName": "名前",
+                    "Tags": [
+                      {
+                        "Name": "System.Name",
+                        "Value": "true"
+                      }
+                    ]
+                  },
+                  {
+                    "Id": "79173e34-c5d1-4618-b6ac-9c5ca7a130ff",
+                    "FieldType": "Property",
+                    "Name": "Description",
+                    "Unique": true,
+                    "LowerBound": 1,
+                    "UpperBound": 1,
+                    "ValueTypeName": "String",
+                    "ValueTypeKind": "Primitive",
+                    "DisplayName": "説明",
+                    "Tags": [
+                      {
+                        "Name": "System.Description",
+                        "Value": "true"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "ViewDefinitions": [
+        {
+          "ViewType": "Form",
+          "Id": "4429d31c-c3af-44e3-993a-7e86d95e37ff",
+          "DisplayName": "詳細",
+          "Name": "Detail",
+          "MetamodelId": "23a1073e-6e4e-4d94-a69f-6a80412fd410",
+          "ShowIcon": false,
+          "IsReadOnly": false,
+          "DisplayTarget": "Both",
+          "ShowTitle": false,
+          "OutlineNumberLevel": 0,
+          "AutoGenerated": false,
+          "FixColumnIndex": 0,
+          "RootControl": {
+            "ControlType": "EntityControl",
+            "Id": "06728d4e-bf80-4e12-883c-63851e1cd99f",
+            "Name": "xxx",
+            "MetamodelId": "23a1073e-6e4e-4d94-a69f-6a80412fd410",
+            "ShowIcon": false,
+            "IsReadOnly": false,
+            "IsReference": false,
+            "HasPathMultipleSteps": false,
+            "ShowTitle": true,
+            "ShowTitleIcon": false,
+            "ShowGridLine": false,
+            "TitleBindingPath": "Name",
+            "Controls": [
+              {
+                "ControlType": "Text",
+                "Id": "03dd9396-4367-4902-9258-d0bb06bfbb22",
+                "DisplayName": "説明",
+                "Name": "Description",
+                "ShowIcon": false,
+                "IsReadOnly": false,
+                "Path": "Description",
+                "IsReference": false,
+                "HasPathMultipleSteps": false,
+                "ShowTitle": true,
+                "ShowTitleIcon": false,
+                "ShowGridLine": false
+              }
+            ]
+          },
+          "Layout": {
+            "ViewElementType": "DocumentLayout",
+            "TitleWidth": 250
+          }
+        }
+      ]
+    }
+  ],
+  "Entities": [
+    {
+      "Id": "3e6327b2-d399-41fc-81a2-dc72ff926ab0",
+      "EntityType": null,
+      "Name": "新規プロジェクト",
+      "MetamodelId": "System.Design.___DesignModel",
+      "Metamodel": "DesignModel",
+      "Fields": {
+        "Name": "新規プロジェクト"
+      }
+    },
+    {
+      "Id": "478ee15e-2451-4e90-aa6a-55749b9b76c4",
+      "EntityType": null,
+      "Name": "新規プロジェクト",
+      "MetamodelId": "System.Project.ProjectClass",
+      "Metamodel": "ProjectClass",
+      "Fields": {
+        "Name": "新規プロジェクト",
+        "Description": ""
+      }
+    }
+  ],
+  "Relations": [
+    {
+      "Id": "9cb66fe0-145a-4f30-9f87-8515f353390b",
+      "RelationType": "Embed",
+      "MetamodelId": "System.Core.___ModelRoot_RootModels",
+      "Metamodel": "___ModelRoot_RootModels",
+      "SourceId": "478ee15e-2451-4e90-aa6a-55749b9b76c4",
+      "TargetId": "3e6327b2-d399-41fc-81a2-dc72ff926ab0",
+      "TargetIndex": -1
+    }
+  ]
+}
