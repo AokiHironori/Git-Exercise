@@ -473,6 +473,16 @@
       "Fields": {
         "Name": "b"
       }
+    },
+    {
+      "Id": "dc405179-6d09-4d1c-bf35-6529e063cda4",
+      "EntityType": "Entity",
+      "Name": "b",
+      "MetamodelId": "6a7a0e37-93e6-4930-8c61-01591e8d5a45",
+      "Metamodel": "b",
+      "Fields": {
+        "Name": "b"
+      }
     }
   ],
   "Relations": [
@@ -492,6 +502,15 @@
       "Metamodel": "bの所有",
       "SourceId": "3354bdc7-211b-447a-a778-2a18c9bab75c",
       "TargetId": "d7d3aa31-40b5-4909-8daa-f39c22e5600a",
+      "TargetIndex": -1
+    },
+    {
+      "Id": "d55f0853-aff9-4091-91f8-5eb2e858d534",
+      "RelationType": "Embed",
+      "MetamodelId": "00b06fb6-f29d-485a-89a9-6f4d6cb2824d",
+      "Metamodel": "bの所有",
+      "SourceId": "3354bdc7-211b-447a-a778-2a18c9bab75c",
+      "TargetId": "dc405179-6d09-4d1c-bf35-6529e063cda4",
       "TargetIndex": -1
     },
     {
