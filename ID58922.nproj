@@ -451,8 +451,7 @@
       "MetamodelId": "dbf8101c-1f1f-47c6-b779-a4203a4dbcca",
       "Metamodel": "a",
       "Fields": {
-        "Name": "a",
-        "Description": "bb"
+        "Name": "a"
       }
     },
     {
