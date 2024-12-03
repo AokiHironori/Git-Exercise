@@ -447,11 +447,11 @@
     {
       "Id": "3354bdc7-211b-447a-a778-2a18c9bab75c",
       "EntityType": "Entity",
-      "Name": "a",
+      "Name": "ammm",
       "MetamodelId": "dbf8101c-1f1f-47c6-b779-a4203a4dbcca",
       "Metamodel": "a",
       "Fields": {
-        "Name": "a"
+        "Name": "ammm"
       }
     },
     {
