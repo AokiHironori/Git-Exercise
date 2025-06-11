@@ -16,14 +16,14 @@ jobs:
       - name: Check for changed .csproj files
         id: csproj_changed
         run: |
-          git fetch origin main
-          changed=$(git diff --name-only ${{ github.event.before }} ${{ github.sha }} | grep '\.csproj$' || true)
+          changed=$(git diff --name-only HEAD~1 HEAD | grep '\.csproj$' || true)
           if [ -n "$changed" ]; then
             echo "csproj_changed=true" >> "$GITHUB_OUTPUT"
             echo "changed_file=$changed" >> "$GITHUB_OUTPUT"
           else
             echo "csproj_changed=false" >> "$GITHUB_OUTPUT"
           fi
+
 
       - name: Extract <Version> from .csproj
         if: steps.csproj_changed.outputs.csproj_changed == 'true'
