@@ -1,8 +1,54 @@
-name: learn-github-actions
-run-name: ${{ github.actor }} is learning GitHub Actions
-on: [push]
+name: Tag on csproj Version Change
+
+on:
+  push:
+    branches:
+      - main
+
 jobs:
-  check-bats-version:
+  tag:
     runs-on: ubuntu-latest
+
     steps:
-    - run: echo "Hello World."
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Check for changed .csproj files
+        id: csproj_changed
+        run: |
+          git fetch origin main
+          changed=$(git diff --name-only ${{ github.event.before }} ${{ github.sha }} | grep '\.csproj$' || true)
+          if [ -n "$changed" ]; then
+            echo "csproj_changed=true" >> "$GITHUB_OUTPUT"
+            echo "changed_file=$changed" >> "$GITHUB_OUTPUT"
+          else
+            echo "csproj_changed=false" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Extract <Version> from .csproj
+        if: steps.csproj_changed.outputs.csproj_changed == 'true'
+        id: get_version
+        run: |
+          file=$(echo "${{ steps.csproj_changed.outputs.changed_file }}" | head -n 1)
+          version=$(grep -oPm1 '(?<=<Version>)[^<]+' "$file")
+          echo "version=$version" >> "$GITHUB_OUTPUT"
+
+      - name: Check if tag already exists
+        id: check_tag
+        if: steps.get_version.outputs.version != ''
+        run: |
+          tag="v${{ steps.get_version.outputs.version }}"
+          git fetch --tags
+          if git tag | grep -qx "$tag"; then
+            echo "tag_exists=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "tag_exists=false" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Create Git tag
+        if: steps.check_tag.outputs.tag_exists == 'false'
+        run: |
+          git config user.name "github-actions"
+          git config user.email "github-actions@github.com"
+          git tag "v${{ steps.get_version.outputs.version }}"
+          git push origin "v${{ steps.get_version.outputs.version }}"
