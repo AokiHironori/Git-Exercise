@@ -1,0 +1,94 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <UseWPF>true</UseWPF>
+    <PackageId>NextDesign.PartialLoadExtension</PackageId>
+    <Version>1.0.12.50605</Version>
+    <PackageProjectUrl>https://www.your-web-here.com/</PackageProjectUrl>
+    <Authors>DENSO CREATE INC.</Authors>
+    <Company>DENSO CREATE INC.</Company>
+    <Product>NextDesign.PartialLoadExtension</Product>
+    <Description>Next Design の部分ロード機能を支援するエクステンションです。モデル構造や関連するモデルファイル一覧から対象のモデルファイルをロードできます。</Description>
+    <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
+    <AssemblyName>NextDesign.PartialLoadExtension</AssemblyName>
+    <RootNamespace>NextDesign.PartialLoadExtension</RootNamespace>
+    <Copyright>DENSO CREATE INC. All rights reserved.</Copyright>
+    <RepositoryUrl>https://github.com/miles-team/NextDesign-PartialLoadExtension</RepositoryUrl>
+    <SatelliteResourceLanguages>en;ja</SatelliteResourceLanguages>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="resources\file.png" />
+    <None Remove="resources\LoadAllModelInEditor16.png" />
+    <None Remove="resources\LoadModelUnits32.png" />
+    <None Remove="resources\LoadPartialModel32.png" />
+    <None Remove="resources\LoadRelatedModelUnits32.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="resources\LoadAllModelInEditor16.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="resources\LoadPartialModel32.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="resources\LoadRelatedModelUnits32.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="DensoCreate.Mvvm" Version="1.1.1.41015" />
+    <PackageReference Include="DensoCreate.DesktopAppFw.Controls" Version="1.4.21.41130" />
+    <PackageReference Include="FontAwesome5" Version="2.1.11" />
+    <PackageReference Include="NextDesign.CustomUI.StatusBars" Version="0.3.1.41101" />
+    <PackageReference Include="NextDesign.Desktop" Version="4.0.1.50109" />
+    <PackageReference Include="NextDesign.Desktop.ExtensionPoints" Version="1.2.2.41030" />
+    <PackageReference Include="NextDesign.NDProjectFileIndexDatabase" Version="0.10.14.60603" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\NextDesign.PartialLoadExtension.Core\NextDesign.PartialLoadExtension.Core.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Update="manifest.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="resources\file.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="resources\LoadModelUnits32.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Update="Properties\Strings.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Strings.resx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Update="Properties\Strings.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Strings.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Update="Views\LoadModelUnitsDialog.xaml">
+      <XamlRuntime>$(DefaultXamlRuntime)</XamlRuntime>
+    </Page>
+  </ItemGroup>
+
+  <Target Name="PostBuild" AfterTargets="PostBuildEvent">
+    <Exec Command="setlocal&#xD;&#xA;set COPY_TARGET_FOLDER=%25LOCALAPPDATA%25\DENSO CREATE\Next Design\extensions\$(TargetName)&#xD;&#xA;&#xD;&#xA;echo # ----------------------------&#xD;&#xA;echo # Publish &#xD;&#xA;echo # ----------------------------&#xD;&#xA;dotnet publish &quot;$(ProjectPath)&quot; -c $(ConfigurationName) --no-build&#xD;&#xA;&#xD;&#xA;echo # ----------------------------&#xD;&#xA;echo # Copy to Extension Folder&#xD;&#xA;echo # ----------------------------&#xD;&#xA;echo Copy files to %25COPY_TARGET_FOLDER%25 ...&#xD;&#xA;&#xD;&#xA;if exist &quot;%25COPY_TARGET_FOLDER%25&quot; rmdir &quot;%25COPY_TARGET_FOLDER%25&quot; /S /Q&#xD;&#xA;xcopy &quot;$(ProjectDir)$(OutDir)publish&quot; &quot;%25LOCALAPPDATA%25\DENSO CREATE\Next Design\extensions\$(TargetName)&quot; /Y /I /E&#xD;&#xA;&#xD;&#xA;rem delete NextDesign dll files&#xD;&#xA;if exist &quot;%25COPY_TARGET_FOLDER%25\NextDesign.Core.dll&quot; del &quot;%25COPY_TARGET_FOLDER%25\NextDesign.Core.dll&quot;&#xD;&#xA;if exist &quot;%25COPY_TARGET_FOLDER%25\DensoCreate.DesktopAppFw.Controls.dll&quot; del &quot;%25COPY_TARGET_FOLDER%25\DensoCreate.DesktopAppFw.Controls.dll&quot;&#xD;&#xA;if exist &quot;%25COPY_TARGET_FOLDER%25\DensoCreate.DesktopAppFw.FrameworkCore.dll&quot; del &quot;%25COPY_TARGET_FOLDER%25\DensoCreate.DesktopAppFw.FrameworkCore.dll&quot;&#xD;&#xA;if exist &quot;%25COPY_TARGET_FOLDER%25\DensoCreate.DI.dll&quot; del &quot;%25COPY_TARGET_FOLDER%25\DensoCreate.DI.dll&quot;&#xD;&#xA;if exist &quot;%25COPY_TARGET_FOLDER%25\DensoCreate.DI.Autofac.dll&quot; del &quot;%25COPY_TARGET_FOLDER%25\DensoCreate.DI.Autofac.dll&quot;&#xD;&#xA;" />
+  </Target>
+
+  <Target Name="PreBuild" BeforeTargets="PreBuildEvent">
+    <Exec Command="if exist &quot;$(projectDir)$(OutDir)publish&quot; rmdir &quot;$(projectDir)$(OutDir)publish&quot; /S /Q" />
+  </Target>
+
+</Project>
